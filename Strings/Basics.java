@@ -7,18 +7,18 @@ public class Basics {
         String str = "Sandeep Kaur";
         System.out.println(str);
 
-        //input + output
+        // input + output
         Scanner sc = new Scanner(System.in);
         System.out.println("Enter your name :");
         String name = sc.nextLine();
         System.out.println("Helloooo " + name);
         sc.close();
-        
-        //length + concatenation
+
+        // length + concatenation
         System.out.println("Length of your name is : " + name.length());
 
-        //charAt
-        for(int i = 0 ; i < name.length() ; i++) {
+        // charAt
+        for (int i = 0; i < name.length(); i++) {
             System.out.print(name.charAt(i));
         }
     }
