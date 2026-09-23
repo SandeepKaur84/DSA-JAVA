@@ -34,9 +34,25 @@ public class FirstLetterUppercase {
         return sb.toString();
     }
 
+    public static String usingString(String str) {
+        String newStr = "";
+        newStr += Character.toUpperCase(str.charAt(0));
+        for (int i = 1; i < str.length(); i++) {
+            if (str.charAt(i) == ' ' && i < str.length() - 1) {
+                newStr += str.charAt(i);
+                i++;
+                newStr += Character.toUpperCase(str.charAt(i));
+            } else {
+                newStr += str.charAt(i);
+            }
+        }
+        return newStr;
+    }
+
     public static void main(String[] args) {
         String str = "hi, i am sandeep";
         System.out.println(convertFirstLetter(str));
         System.out.println(practice(str));
+        System.out.println(usingString(str));
     }
 }
